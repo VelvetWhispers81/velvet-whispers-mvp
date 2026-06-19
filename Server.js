@@ -23,3 +23,25 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
   res.send("Velvet Whispers backend is live");
 });
+import express from "express";
+import cors from "cors";
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(cors());
+app.use(express.json());
+
+// ⭐ REQUIRED ROOT ROUTE — FIXES "Not Found"
+app.get("/", (req, res) => {
+  res.send("Velvet Whispers backend is live");
+});
+
+// ⭐ Your API routes go BELOW this line
+// Example:
+// app.use("/api/auth", authRoutes);
+// app.use("/api/stream", streamRoutes);
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
