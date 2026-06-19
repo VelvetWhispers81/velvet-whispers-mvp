@@ -1,4 +1,6 @@
-const express = require("express");
+app.get("/", (req, res) => {
+  res.send("Velvet Whispers backend is live");
+});const express = require("express");
 const path = require("path");
 const app = express();
 
