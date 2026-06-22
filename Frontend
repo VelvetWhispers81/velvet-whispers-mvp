@@ -1,5 +1,5 @@
 frontend/
   package.json
   next.config.js
-  pages/
+  pages/index.js
   public/
